@@ -1,6 +1,6 @@
 /* Base Styling */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -9,28 +9,31 @@ body {
     transition: background-color 0.3s ease-in-out;
 }
 
+/* Header */
 header {
-    background: #0a3d62;
+    background: #1e3d58;
     color: #fff;
     padding: 2rem 0;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
     font-size: 2.5rem;
-    animation: headerAnimation 1s ease-in-out;
+    margin-bottom: 0.5rem;
 }
 
-@keyframes headerAnimation {
-    0% { opacity: 0; transform: translateY(-20px); }
-    100% { opacity: 1; transform: translateY(0); }
+header p {
+    font-size: 1.2rem;
 }
 
+/* Navigation */
 nav ul {
     background: #1e3d58;
     list-style: none;
     padding: 0;
     text-align: center;
     margin: 0;
-    transition: background-color 0.3s ease;
 }
 
 nav ul li {
@@ -57,6 +60,7 @@ nav ul li a:active {
     background: #f26b5f;
 }
 
+/* Sections */
 section {
     padding: 2rem;
     margin: 2rem auto;
@@ -67,38 +71,37 @@ section {
     animation: sectionAnimation 1s ease-in-out;
 }
 
-@keyframes sectionAnimation {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
+section h2 {
+    color: #1e3d58;
+    font-size: 2rem;
 }
 
-h1, h2, h3 {
-    color: #0a3d62;
-    font-family: 'Arial', sans-serif;
-}
-
-p {
-    font-size: 1.2rem;
+section p {
+    font-size: 1.1rem;
     color: #555;
 }
 
-button {
-    padding: 1rem 2rem;
-    background: #0a3d62;
-    color: #fff;
-    font-size: 1.1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s ease;
-    margin-top: 1rem;
+section ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-button:hover {
-    background: #ff6f61;
-    transform: scale(1.1);
+section ul li {
+    margin: 1rem 0;
 }
 
+section ul li a {
+    color: #1e3d58;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+section ul li a:hover {
+    color: #ff6f61;
+}
+
+/* Footer */
 footer {
     background: #1e3d58;
     color: #fff;
@@ -110,28 +113,15 @@ footer {
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Animation on Scroll */
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+/* Animation */
+@keyframes sectionAnimation {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
-.section-scroll {
-    opacity: 0;
-    animation: fadeIn 1s forwards;
-}
-
-.section-scroll:nth-child(even) {
-    animation-delay: 0.5s;
-}
-
-.section-scroll:nth-child(odd) {
-    animation-delay: 0.2s;
-}
-
-/* Media Queries for Responsiveness */
+/* Media Queries */
 @media (max-width: 768px) {
-    header {
+    header h1 {
         font-size: 2rem;
     }
 
@@ -144,7 +134,7 @@ footer {
         margin: 1rem;
     }
 
-    button {
-        padding: 0.8rem 1.5rem;
+    footer {
+        font-size: 0.9rem;
     }
 }
